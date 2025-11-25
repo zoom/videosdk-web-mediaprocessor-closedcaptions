@@ -1,22 +1,20 @@
-# Video SDK Web Video-Processor Quickstart
+# Video SDK Web Media Processor - Closed Captions
 
 Use of this sample app is subject to our [Terms of Use](https://explore.zoom.us/en/video-sdk-terms/).
 
-The [Zoom Video SDK for web](https://developers.zoom.us/docs/video-sdk/web/) enables you to build custom video experiences on a webpage with Zoom's core technology. This demo showcases how to use a [media processor](https://developers.zoom.us/docs/video-sdk/web/raw-data) to add a watermark to the video stream:
-
-![](images/screencap.png)
+The [Zoom Video SDK for web](https://developers.zoom.us/docs/video-sdk/web/) enables you to build custom video experiences on a webpage with Zoom's core technology. This demo showcases how to use a [media processor](https://developers.zoom.us/docs/video-sdk/web/raw-data) to display closed captions on user video and screenshare. It uses the Video SDK [Live transcription](https://developers.zoom.us/docs/video-sdk/web/transcription-translation/) feature.
 
 ## Installation
 
 To get started, clone the repo:
 
-`git clone https://github.com/zoom/videosdk-web-videoprocessor-quickstart`
+`git clone https://github.com/zoom/videosdk-web-mediaprocessor-closedcaptions`
 
 ## Setup
 
 1. Install the dependencies:
 
-   `npm install`
+   `bun install # or npm install`
 
 1. Create a `.env` file in the root directory of the project, you can do this by copying the `.env.example` file (`cp .env.example .env`) and replacing the values with your own. The `.env` file should look like this, with your own Zoom Video SDK key and secret:
 
@@ -37,12 +35,9 @@ To get started, clone the repo:
 
 1. Click "Join" to join the session
 
-1. The rendered video will have a watermark
+1. As you speak, you'll see closed captions displayed on your video and screenshare.
 
 For the full list of features and event listeners, as well as additional guides, see our [Video SDK docs](https://developers.zoom.us/docs/video-sdk/web/).
-
-You can find a more example in the [advanced branch](https://github.com/zoom/videosdk-web-videoprocessor-quickstart/tree/advanced):
-![](images/card.png)
 
 ## Need help?
 
