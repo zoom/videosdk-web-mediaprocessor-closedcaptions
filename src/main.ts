@@ -1,17 +1,13 @@
 import ZoomVideo, { event_peer_video_state_change, LiveTranscriptionLanguage, Processor, VideoPlayer, VideoQuality } from "@zoom/videosdk";
-import { generateSignature, getBitmap } from "./utils";
+import { getBitmap } from "./utils";
 import "./style.css";
-
-// You should sign your JWT with a backend service in a production use-case
-const sdkKey = import.meta.env.VITE_SDK_KEY as string;
-const sdkSecret = import.meta.env.VITE_SDK_SECRET as string;
 
 const myShareEle = document.querySelector('#my-screen-share-content-video')! as HTMLVideoElement;
 const myShareCanvas = document.querySelector('#my-screen-share-content-canvas')! as HTMLCanvasElement;
 const shareCanvas = document.querySelector('#users-screen-share-content-canvas')! as HTMLCanvasElement;
 const videoContainer = document.querySelector('video-player-container') as HTMLElement;
+
 const sessionName = "TestOne";
-const role = 1;
 const username = `User-${String(new Date().getTime()).slice(6)}`;
 let videoprocessor: Processor;
 let shareprocessor: Processor;
@@ -19,8 +15,7 @@ let shareprocessor: Processor;
 const client = ZoomVideo.createClient();
 await client.init("en-US", "Global", { patchJsMedia: false, });
 
-const startCall = async () => {
-    const token = generateSignature(sessionName, role, sdkKey, sdkSecret);
+const startCall = async (token: string) => {
     client.on("peer-video-state-change", renderVideo);
     client.on('active-share-change', (payload) => {
         if (payload.state === 'Active') {
@@ -139,13 +134,14 @@ const stopBtn = document.querySelector("#stop-btn") as HTMLButtonElement;
 const shareBtn = document.querySelector("#share-btn") as HTMLButtonElement;
 
 startBtn.addEventListener("click", async () => {
-    if (!sdkKey || !sdkSecret) {
-        alert("Please enter SDK Key and SDK Secret in the .env file");
+    const token = window.prompt("Enter a token");
+    if (!token) {
+        alert("Please enter a token");
         return;
     }
     startBtn.innerHTML = "Connecting...";
     startBtn.disabled = true;
-    await startCall();
+    await startCall(token);
     startBtn.innerHTML = "Connected";
     startBtn.style.display = "none";
     shareBtn.style.display = "block";
