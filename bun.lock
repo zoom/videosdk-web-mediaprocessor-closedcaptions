@@ -5,21 +5,21 @@
     "": {
       "name": "zoom-vite",
       "dependencies": {
-        "@zoom/videosdk": "latest",
-        "fabric": "latest",
+        "@zoom/videosdk": "^2.4.0",
+        "fabric": "^7.2.0",
       },
       "devDependencies": {
-        "@tailwindcss/vite": "latest",
-        "@types/jsrsasign": "latest",
-        "@types/node": "latest",
-        "chalk": "latest",
-        "clipboardy": "latest",
-        "commander": "latest",
-        "dotenv": "latest",
-        "jsrsasign": "latest",
-        "tailwindcss": "latest",
-        "typescript": "latest",
-        "vite": "latest",
+        "@tailwindcss/vite": "^4.2.2",
+        "@types/jsrsasign": "^10.5.15",
+        "@types/node": "^25.5.0",
+        "chalk": "^5.6.2",
+        "clipboardy": "^5.3.1",
+        "commander": "^14.0.3",
+        "dotenv": "^17.3.1",
+        "jsrsasign": "^11.1.1",
+        "tailwindcss": "^4.2.2",
+        "typescript": "^6.0.2",
+        "vite": "^8.0.3",
       },
     },
   },
@@ -128,7 +128,7 @@
 
     "@types/node": ["@types/node@25.5.0", "", { "dependencies": { "undici-types": "~7.18.0" } }, "sha512-jp2P3tQMSxWugkCUKLRPVUpGaL5MVFwF8RDuSRztfwgN1wmqJeMSbKlnEtQqU8UrhTmzEmZdu2I6v2dpp7XIxw=="],
 
-    "@zoom/videosdk": ["@zoom/videosdk@2.3.15", "", {}, "sha512-4+vAI/LCsjPdWV36KjXuRVfre0NErOBWBLGipEtIZOpErhP5Ktjoz9lyt7tyZ0pWulk3N1cTQepOilQXF5//NA=="],
+    "@zoom/videosdk": ["@zoom/videosdk@2.4.0", "", {}, "sha512-B+wi9kQZ8WNF3MezdCxPTiB3ei49nQxqfwZii1nVq3ETE5lO9MND9V6xqrM/7mqPLa5HxyUbziY90H6sKj1Cig=="],
 
     "agent-base": ["agent-base@7.1.4", "", {}, "sha512-MnA+YT8fwfJPgBx3m60MNqakm30XOkyIoH1y6huTQvC0PwZG7ki8NacLBcrPbNoo8vEZy7Jpuk7+jMO+CUovTQ=="],
 
