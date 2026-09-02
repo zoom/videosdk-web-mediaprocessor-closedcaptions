@@ -5,7 +5,7 @@
     "": {
       "name": "zoom-vite",
       "dependencies": {
-        "@zoom/videosdk": "^2.4.5",
+        "@zoom/videosdk": "^2.5.0",
         "fabric": "^7.4.0",
       },
       "devDependencies": {
@@ -128,7 +128,7 @@
 
     "@types/node": ["@types/node@25.9.1", "", { "dependencies": { "undici-types": ">=7.24.0 <7.24.7" } }, "sha512-xfrlY7UD5rMJk3ZVJP8BNzS28J36YJg+xp+LPXV1TdWxr8uMH5A860QNxYDGQe/ylDSgjxE52Q9VnO7p75tJxg=="],
 
-    "@zoom/videosdk": ["@zoom/videosdk@2.4.5", "", {}, "sha512-C73+Fe6vAG6lw9y0jd50R3bBbLn5hrPMINC5XsZwwvBJ4L3l/AOXyBXBAgXCz8squejLaoTPldqOeI2QIsoLtw=="],
+    "@zoom/videosdk": ["@zoom/videosdk@2.5.0", "", { "bin": { "videosdk": "bin/videosdk-cli.cjs" } }, "sha512-BL3vNdrjwdV/hYwhvRECQlKlwv4Pl8IX2+yNxUZwVmKL1fsLT8n4Zu20Szw4u/C612LAHpgCMaFBoLlUr3/ePw=="],
 
     "agent-base": ["agent-base@7.1.4", "", {}, "sha512-MnA+YT8fwfJPgBx3m60MNqakm30XOkyIoH1y6huTQvC0PwZG7ki8NacLBcrPbNoo8vEZy7Jpuk7+jMO+CUovTQ=="],
 
