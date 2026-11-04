@@ -22,7 +22,7 @@
     "vite": "^8.0.16"
   },
   "dependencies": {
-    "@zoom/videosdk": "^2.6.0",
+    "@zoom/videosdk": "^2.6.10",
     "fabric": "^7.4.0"
   }
 }
